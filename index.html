@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 | AI 엔지니어 신지섭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* 전체적으로 부드럽고 연한 톤으로 색상 변경 */
+            --primary-color: #334155;     /* 부드러운 다크 그레이 (너무 까맣지 않게) */
+            --secondary-color: #64748b;   /* 중간 회색 */
+            --accent-color: #5a8cff;      /* 부드럽고 연한 파스텔톤 블루 */
+            --bg-color: #ffffff;
+            --section-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --trouble-bg: #f4f8ff;        /* 아주 연한 파란색 배경 */
+            --trouble-border: #8baaff;    /* 연한 파란색 테두리 */
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: var(--primary-color);
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            background-color: var(--bg-color);
+            word-break: keep-all;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 70px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 35px;
+        }
+
+        h1 { font-size: 2.8rem; margin: 0 0 10px 0; font-weight: 700; letter-spacing: -1px; color: #1e293b; }
+        .contact { color: var(--secondary-color); font-size: 1rem; margin-bottom: 25px; font-weight: 500; }
+        .contact a { color: var(--accent-color); text-decoration: none; margin: 0 5px; font-weight: 600; }
+        .contact a:hover { text-decoration: underline; }
+        
+        /* Intro Quote Box */
+        .intro-quote {
+            background-color: var(--section-bg);
+            border-left: 4px solid var(--accent-color);
+            padding: 20px 25px;
+            font-size: 1.05rem;
+            color: #475569;
+            font-weight: 500;
+            border-radius: 0 8px 8px 0;
+            line-height: 1.6;
+        }
+
+        /* Section Style */
+        section { margin-bottom: 70px; }
+        h2 { font-size: 1.8rem; border-left: 5px solid var(--accent-color); padding-left: 15px; margin-bottom: 40px; color: #1e293b; }
+
+        /* Project Item */
+        .project { margin-bottom: 40px; }
+        .project-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; flex-wrap: wrap; }
+        .project-title { font-size: 1.5rem; font-weight: 700; color: #1e293b; }
+        .project-date { color: var(--secondary-color); font-size: 1rem; font-weight: 600; }
+        .project-info { font-weight: 600; color: var(--accent-color); margin-bottom: 15px; display: block; font-size: 1.05rem; }
+        .project-desc { margin-bottom: 25px; font-weight: 400; color: #475569; font-size: 1.05rem; }
+
+        /* 목차(Details) 크기 및 강조 */
+        h4 { 
+            margin: 35px 0 15px 0; 
+            font-size: 1.35rem; /* 크기 확대 */
+            color: #1e293b; 
+            border-bottom: 2px solid var(--border-color); /* 긴 밑줄로 섹션 분리감 확보 */
+            display: block; 
+            padding-bottom: 8px; 
+            font-weight: 700; 
+        }
+        h5 { 
+            margin: 20px 0 8px 0; 
+            font-size: 1.15rem; /* 크기 확대 */
+            color: var(--accent-color); 
+            font-weight: 700; 
+        }
+        
+        /* Lists */
+        ul { list-style: none; padding-left: 0; margin: 10px 0; }
+        li { position: relative; padding-left: 18px; margin-bottom: 10px; color: #334155; }
+        li::before { content: "•"; position: absolute; left: 0; color: var(--accent-color); font-weight: bold; font-size: 1.2rem; line-height: 1.5; }
+
+        /* Troubleshooting Box */
+        .troubleshooting {
+            background-color: var(--trouble-bg);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            border-left: 4px solid var(--trouble-border);
+            color: #334155;
+        }
+        .troubleshooting strong { color: var(--accent-color); display: block; margin-bottom: 10px; font-size: 1.15rem; font-weight: 700; }
+
+        /* Tech Stack Badges */
+        .stack { margin-top: 30px; }
+        .stack-title { font-weight: 700; display: block; margin-bottom: 12px; color: #1e293b; font-size: 1.1rem; }
+        .badge {
+            display: inline-block;
+            background: var(--section-bg);
+            color: #475569;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Project Divider */
+        hr.project-divider {
+            border: 0;
+            border-top: 2px dashed var(--border-color);
+            margin: 60px 0;
+        }
+
+        @media (max-width: 600px) {
+            .project-header { flex-direction: column; }
+            h1 { font-size: 2.2rem; }
+            .intro-quote { font-size: 0.95rem; }
+            .contact a { margin: 0 5px 0 0; display: inline-block; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>신지섭</h1>
+        <div class="contact">
+            Backend & AI Engineer | 
+            <a href="mailto:chris9269@naver.com">chris9269@naver.com</a> |
+            <a href="https://github.com/Melonmacaron" target="_blank">github.com/Melonmacaron</a>
+        </div>
+        <div class="intro-quote">
+            "모델 하나가 아닌 서비스 전체의 숲을 보며, 주어진 업무는 책임지고 해결하는 AI 엔지니어 신지섭입니다. 프로젝트를 진행할 때에는 주어진 작업을 책임감을 가지고 모두 완수하는 것을 가장 중요하게 생각합니다."
+        </div>
+    </header>
+
+    <section>
+        <h2>Projects</h2>
+
+        <article class="project">
+            <div class="project-header">
+                <span class="project-title">AI 향수 큐레이션 플랫폼 프로젝트 (Scentence)</span>
+                <span class="project-date">2025.12~2026.2</span>
+            </div>
+            <span class="project-info">참여인원: 5명</span>
+            <p class="project-desc">대화형 향수 추천 AI 챗봇, 향수 취향 지도, 레이어링 추천 챗봇 등의 기능을 제공하는 향수 큐레이션 플랫폼 서비스 입니다.</p>
+            
+            <h4>역할</h4>
+            
+            <h5>데이터</h5>
+            <ul>
+                <li><strong>향수 데이터 수집 및 전처리:</strong> Parfumo 사이트에서 약 15000여건의 향수의 데이터(향수명, 브랜드, 조향사, 어코드, 노트, 계절등)를 수집하였고 전처리하여 최종적으로 4100여건의 향수데이터를 RDB에 적재하였습니다.</li>
+            </ul>
+
+            <h5>설계</h5>
+            <ul>
+                <li><strong>향수 추천 Multi Agent 설계 및 구현:</strong> 경로 라우팅, 재질문, 검색, 응답 4가지의 에이전트와 각 에이전트가 사용할 tool을 설계 및 구현하였습니다.</li>
+                <li><strong>세부 추천 로직 설계:</strong> 사용자의 입력에서 성별, 상황, 요청 분위기 등의 정보를 탐색하여 추천에 필요한 정보들의 최소치를 정의하고 이를 통해 각 요청에 맞는 전략을 수립하고</li>
+                <li><strong>Agent 및 RAG 평가 지표 설계:</strong> Agent답변과 RAG의 성능 평가를 위해서 Shannon Entropy와 Simpson Index를 통해 '개인화 지수'와 '향수 중복률'을 평가 지표로 수립하고 이를 기반으로 성능 평가 및 성능 개선을 진행해 나갔습니다.</li>
+            </ul>
+
+            <h5>Infra</h5>
+            <ul>
+                <li><strong>AWS RDS에 데이터 적재 및 연결:</strong> PostgreSQL을 이용하여 RDB를 구성하고 Docker Linux 환경에서 로컬 DB를 호스팅하도록 설계했었고 DB 초기화 및 데이터 자동 적재를 구현하고 AWS RDS를 사용하여 배포하였습니다.</li>
+            </ul>
+
+            <div class="troubleshooting">
+                <strong>트러블 슈팅</strong>
+                초기 설계 단계에서 설명 가능한 추천을 구현하기 위해 출력 형식을 고정하고자 프롬프트에 Few Shot 방식을 사용하였습니다. 그러나 이 방식은 예외 상황이 발생하거나 검색 결과가 없는 경우에도 에이전트가 고정된 형식에 맞춰 답변을 생성하려다 보니, 데이터베이스에 등록되지 않은 가짜 향수 정보를 만들어내는 할루시네이션 문제가 있었습니다. 그렇다고 에이전트에게 자율성을 더 부여하기에는 프로젝트의 본래 목표인 설명 가능한 추천의 일관성을 유지하기 어려웠습니다. 이를 해결하기 위해 로직상에서 예외 처리와 검색 결과 부재 상황을 명확히 분리하여 각각 적합한 에이전트에게 작업을 할당하는 방식을 채택하였습니다. 또한 에이전트의 자율성 조절을 위해 입력된 정보가 데이터베이스에 존재하는지 여부를 우선적으로 분류하는 단계를 두었습니다. 데이터가 없는 경우에는 별도의 전용 프롬프트를 가진 에이전트가 응대하도록 설계함으로써 할루시네이션을 방지하고 자연스러운 대화 흐름을 확보하며 문제를 해결하였습니다.
+            </div>
+
+            <div class="stack">
+                <span class="stack-title">기술 스택</span>
+                <span class="badge">Python</span><span class="badge">Docker</span><span class="badge">AWS EC2</span><span class="badge">PostgresSQL</span><span class="badge">pgvector</span><span class="badge">Langgraph</span><span class="badge">model : gpt 4.1, gpt 5.2</span>
+            </div>
+        </article>
+
+        <hr class="project-divider">
+
+        <article class="project">
+            <div class="project-header">
+                <span class="project-title">RAG 기반 컴퓨터 비전 유사 특허 검색 챗봇 프로젝트 (Pai)</span>
+                <span class="project-date">2025.11~2025.12</span>
+            </div>
+            <span class="project-info">참여인원: 5명</span>
+            <p class="project-desc">컴퓨터 비전과 관련된 사용자의 아이디어를 RAG 검색을 기반으로 한국에 등록된 특허 중에서 유사한 특허를 제시하고 사용자의 아이디어와의 차별점을 제시하고 실제 등록 가능성까지 검토해주는 AI 챗봇 서비스입니다.</p>
+            
+            <h4>역할</h4>
+
+            <h5>데이터</h5>
+            <ul>
+                <li><strong>KIPRIS 특허 데이터 수집:</strong> KIPRIS에서 지원하는 API를 이용하여 특허에 대한 데이터(특허 번호, 청구항 등)를 수집후 xml 형태로 저장</li>
+            </ul>
+
+            <h5>RAG</h5>
+            <ul>
+                <li><strong>IPC 코드의 임베딩 방식 정의 및 전처리:</strong> 계층적 구조를 가지고 있는 IPC 코드를 벡터 DB에 임베딩하기 위해서 상위 코드의 내용을 하위 코드에 포함하여 임베딩하도록 정의</li>
+                <li><strong>IPC 코드 RAG 검색 방식 설계 및 최적화:</strong> 부모 코드의 설명을 자식 코드에 덧붙이면서 나타날 수 있는 정보 오염 문제를 해결하기 위해서 형제 코드를 제외시키고 부모 코드를 함께 검색 결과로 제공하도록 하여 검색의 다양성 확보</li>
+            </ul>
+
+            <h5>Agent</h5>
+            <ul>
+                <li><strong>LLM Agent 설계 및 구현:</strong> LangGraph의 Re-Act 방식의 에이전트를 이용하여 RAG검색 도구를 정의하고 바인딩. 도구 스키마 초안과 초기 프롬프트를 정의하여 프롬프트의 기초적인 틀 제작</li>
+            </ul>
+
+            <h5>Infra</h5>
+            <ul>
+                <li><strong>Docker 컨테이너화 및 AWS 배포:</strong> 해당 프로젝트 전체를 도커이미지로 변환. 생성된 도커 이미지를 이용하여 AWS EC2인스턴스에 업로드 후에 배포</li>
+            </ul>
+
+            <div class="troubleshooting">
+                <strong>트러블 슈팅</strong>
+                Chroma DB가 Window환경과 Linux환경에서의 저장방식이 조금 달라서 Window 환경에서의 임베딩을 Linux환경에서 제대로 포착하지 못하는 문제가 있었고 이를 해결하기 위해 Window환경에서 Docker를 이용하여 재임베딩을 통해 RAG를 재구성하는 과정을 거쳤습니다.
+            </div>
+
+            <div class="stack">
+                <span class="stack-title">기술 스택</span>
+                <span class="badge">Python</span><span class="badge">Docker</span><span class="badge">AWS EC2</span><span class="badge">Chroma DB</span><span class="badge">Langgraph</span><span class="badge">Django</span><span class="badge">model : gpt 5.2</span>
+            </div>
+        </article>
+
+        <hr class="project-divider">
+
+        <article class="project">
+            <div class="project-header">
+                <span class="project-title">2026 월드컵 순위 예측 ML 프로젝트</span>
+                <span class="project-date">2025.9~2025.10</span>
+            </div>
+            <span class="project-info">참여인원: 4명</span>
+            <p class="project-desc">2026년 월드컵의 각 나라별 순위를 이전 월드컵 성적, 예선전 성적, 선수단별 성적 데이터 등을 이용하여 예측하는 ML 모델을 제작하는 프로젝트 입니다. 최종 예측 모델은 매치의 승패를 이진 분류하는 모델을 이용하여 특정 매치업의 승패를 예측하고 이를 시뮬레이션을 통해 평균 수치를 이용하여 순위를 예측하는 모델을 제작하였습니다.</p>
+            
+            <h4>역할</h4>
+
+            <h5>데이터</h5>
+            <ul>
+                <li><strong>나라별 월드컵 예선전 성적 데이터 분석 및 전처리:</strong> 2014년 부터 약 10년의 데이터를 사용하도록 하였고 예선전 성적과 월드컵 본선 성적의 상관관계를 분석하여 사용방법을 탐색</li>
+            </ul>
+
+            <h5>모델 설계 및 구현</h5>
+            <ul>
+                <li><strong>XGboost, Random Forest등 ML 모델 적용 및 평가:</strong> 처음에는 순위 그 자체를 회귀와 분류로 예측하는 모델을 제작하였으나 20~70%의 성능으로 편차가 크게 나타남. 성적을 명확하게 수치화 하는 것이 아니라 조별리그, 16강, 8강 등의 그룹화 이후 다중 분류 성능을 측정했을 때에는 40%의 안정적이지만 비교적 낮은 수치의 정확도를 보임</li>
+                <li><strong>매치 예측 모델 설계 및 구현:</strong> 특정 매치업의 승패를 예측하는 모델을 제작하여 60% 정도의 정확도를 가진 모델 제작. 무승부에 대한 예측율이 현저하게 떨어지는 것을 확인후 승률 자체를 무승부 확률로 변경하여 처리하기로 결정. 매치 승패 예측의 경우 74%로 성능 향상 이후 해당 매치 승률이 여러 차례의 시뮬레이션 과정을 거치면 전체 결과 예측에 수렴할 것으로 가정하고 시뮬레이션 모델을 제작</li>
+            </ul>
+
+            <div class="troubleshooting">
+                <strong>트러블 슈팅</strong>
+                초기에는 성적데이터 자체를 이용하여 본선에서의 순위를 회귀로 예측하는 형태로 모델을 설계했지만 월드컵 본선 성적에서 상정하지 못했던 변수가 너무 많고 데이터의 개수가 부족하여 성능 편차가 큰 형태의 모델이 제작되었습니다. 위의 데이터 부족과 상정하지 못한 변수를 최대한 줄이고자 매치 시뮬레이션 형태의 모델로 예측 방식을 변경하였고 결국 시뮬레이션의 횟수가 커진다면 전체 순위 예측의 성능이 매치 예측 모델의 성능에 수렴할 것을 가정하고 모델을 제작하였습니다.
+            </div>
+
+            <div class="stack">
+                <span class="stack-title">기술 스택</span>
+                <span class="badge">Python</span><span class="badge">Pytorch</span>
+            </div>
+        </article>
+
+        <hr class="project-divider">
+
+        <article class="project">
+            <div class="project-header">
+                <span class="project-title">배틀그라운드 착륙 위치별 조기 탈락 예측 ML 프로젝트</span>
+                <span class="project-date">2025.10~2025.11</span>
+            </div>
+            <span class="project-info">참여인원: 5명</span>
+            <p class="project-desc">배틀그라운드 게임에서 사용자의 평균 스탯 데이터를 이용하여 사용자의 특성을 파악하고 특성에 따라서 지도 상의 특정 지점에 내렸을 때 2분 30초 이내에 사망할 확률을 예측하는 ML 모델을 만드는 프로젝트 입니다.</p>
+            
+            <h4>역할</h4>
+
+            <h5>데이터</h5>
+            <ul>
+                <li><strong>인게임 킬로그 데이터 분석 및 전처리:</strong> 인게임 킬로그 데이터를 분석하여 특정 시간에 사망한 플레이어와 해당 플레이어의 평균적인 스탯을 매핑</li>
+            </ul>
+
+            <h5>모델 설계 및 구현</h5>
+            <ul>
+                <li><strong>1분 30초(모든 플레이어가 지상에 착륙하는 시간) 이내의 사망 지점으로 부터 착륙 지점을 예측하는 ML 모델 설계 및 구현:</strong> 착륙지점에 대한 명확한 데이터 부재로 착륙 지점을 예측해야 했는데 게임 시간 1분 30초 이내에 사망한 데이터를 이용하여 극초기에 사망한 좌표는 착륙지점과 거의 유사할 것이다 라고 가설을 수립 후 비교. 해당 킬로그 데이터를 이용하여 지도 상에 표시했을때 사람들이 일반적으로 착륙할 것으로 예상된 지점과 일치여부를 확인. 킬로그 데이터를 이용하여 착륙위치들을 군집화. 92%의 정확도로 착륙위치 예측 성공 (XGBoost모델 이용)</li>
+                <li><strong>플레이어 스탯 별로 착륙 위치에 따른 2분 30초(플레이어가 착륙이후에 첫번째 교전이 마무리 되는 시간) 이내에 사망할 확률 예측 ML 모델 구현 및 테스트:</strong> 사전에 수집된 플레이어의 스탯 (어시스트 수, 다운 횟수, 차량 이동 거리, 도보 이동 거리, 적에게 가한 피해량, 최종적으로 적을 처치한 횟수, 경기 종료 시 팀의 최종 순위)의 평균 데이터와 앞서 구한 예상 착륙 군집을 이용하여 2분 30초 이내에 사망할 확률을 예측. 67%의 정확도를 보임</li>
+            </ul>
+
+            <div class="troubleshooting">
+                <strong>트러블 슈팅</strong>
+                최초 설계 단계에서는 플레이어의 스탯과 기다 킬로그 데이터를 이용하여 ML 모델 학습을 진행하려 했으나 회의를 통해 배틀그라운드라는 게임 특성상 착륙 위치가 조기사망 예측에 굉장히 중요한 요소라고 판단하였습니다. 하지만 주어진 데이터에는 착륙 좌표에 대한 데이터가 없었기 때문에 게임 진행 극초반 1분 30초(모든 플레이어가 지상에 내려왔을 시점)의 킬로그들을 착륙 지점으로 가정하고 이를 군집화 하여 착륙 지점 군집을 예측 하는 모델을 만들어서 데이터의 부족을 해결하였습니다.
+            </div>
+
+            <div class="stack">
+                <span class="stack-title">기술 스택</span>
+                <span class="badge">Python</span><span class="badge">Pytorch</span><span class="badge">Streamlit</span>
+            </div>
+        </article>
+
+    </section>
+
+</body>
+</html>
