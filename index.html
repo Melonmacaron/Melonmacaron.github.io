@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0031)https://melonmacaron.github.io/ -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오 | AI 엔지니어 신지섭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="./포트폴리오 _ AI 엔지니어 신지섭_files/css2" rel="stylesheet">
     <style>
         :root {
             /* 전체적으로 부드럽고 연한 톤으로 색상 변경 */
@@ -141,6 +141,16 @@
             .intro-quote { font-size: 0.95rem; }
             .contact a { margin: 0 5px 0 0; display: inline-block; }
         }
+
+        @media print {
+            body { padding: 20px; max-width: 100%; }
+            .project { page-break-inside: avoid; break-inside: avoid; }
+            .troubleshooting { page-break-inside: avoid; break-inside: avoid; }
+            .stack { page-break-inside: avoid; break-inside: avoid; }
+            h4, h5 { page-break-after: avoid; break-after: avoid; }
+            li { page-break-inside: avoid; break-inside: avoid; }
+            .project-header { page-break-after: avoid; break-after: avoid; }
+        }
     </style>
 </head>
 <body>
@@ -148,8 +158,8 @@
     <header>
         <h1>신지섭</h1>
         <div class="contact">
-            Backend & AI Engineer | 
-            <a href="mailto:chris9269@naver.com">chris9269@naver.com</a> |
+            Backend &amp; AI Engineer | 
+            <a href="/cdn-cgi/l/email-protection#fe9d968c978dc7ccc8c7be909f889b8cd09d9193"><span class="__cf_email__" data-cfemail="0d6e657f647e343f3b344d636c7b687f236e6260">[email&#160;protected]</span></a> |
             <a href="https://github.com/Melonmacaron" target="_blank">github.com/Melonmacaron</a>
         </div>
         <div class="intro-quote">
@@ -181,7 +191,7 @@
             <h5>설계</h5>
             <ul>
                 <li><strong>향수 추천 Multi Agent 설계 및 구현:</strong> 경로 라우팅, 재질문, 검색, 응답 4가지의 에이전트와 각 에이전트가 사용할 tool을 설계 및 구현하였습니다.</li>
-                <li><strong>세부 추천 로직 설계:</strong> 사용자의 입력에서 성별, 상황, 요청 분위기 등의 정보를 탐색하여 추천에 필요한 정보들의 최소치를 정의하고 이를 통해 각 요청에 맞는 전략을 수립하고</li>
+                <li><strong>세부 추천 로직 설계:</strong> 사용자의 입력에서 성별, 상황, 요청 분위기 등의 정보를 탐색하여 추천에 필요한 정보들의 최소치를 정의하고 이를 통해 각 요청에 맞는 검색 전략을 수립하여 에이전트에 적용하였습니다.</li>
                 <li><strong>Agent 및 RAG 평가 지표 설계:</strong> Agent답변과 RAG의 성능 평가를 위해서 Shannon Entropy와 Simpson Index를 통해 '개인화 지수'와 '향수 중복률'을 평가 지표로 수립하고 이를 기반으로 성능 평가 및 성능 개선을 진행해 나갔습니다.</li>
             </ul>
 
@@ -223,13 +233,13 @@
 
             <h5>RAG</h5>
             <ul>
-                <li><strong>IPC 코드의 임베딩 방식 정의 및 전처리:</strong> 계층적 구조를 가지고 있는 IPC 코드를 벡터 DB에 임베딩하기 위해서 상위 코드의 내용을 하위 코드에 포함하여 임베딩하도록 정의</li>
-                <li><strong>IPC 코드 RAG 검색 방식 설계 및 최적화:</strong> 부모 코드의 설명을 자식 코드에 덧붙이면서 나타날 수 있는 정보 오염 문제를 해결하기 위해서 형제 코드를 제외시키고 부모 코드를 함께 검색 결과로 제공하도록 하여 검색의 다양성 확보</li>
+                <li><strong>IPC 코드의 임베딩 방식 정의 및 전처리:</strong> 계층적 구조를 가지고 있는 IPC 코드를 벡터 DB에 임베딩하기 위해서 상위 코드의 내용을 하위 코드에 포함하여 임베딩하도록 정의하였습니다.</li>
+                <li><strong>IPC 코드 RAG 검색 방식 설계 및 최적화:</strong> 부모 코드의 설명을 자식 코드에 덧붙이면서 나타날 수 있는 정보 오염 문제를 해결하기 위해서 형제 코드를 제외시키고 부모 코드를 함께 검색 결과로 제공하도록 하여 검색의 다양성을 확보하였습니다.</li>
             </ul>
 
             <h5>Agent</h5>
             <ul>
-                <li><strong>LLM Agent 설계 및 구현:</strong> LangGraph의 Re-Act 방식의 에이전트를 이용하여 RAG검색 도구를 정의하고 바인딩. 도구 스키마 초안과 초기 프롬프트를 정의하여 프롬프트의 기초적인 틀 제작</li>
+                <li><strong>LLM Agent 설계 및 구현:</strong> LangGraph의 Re-Act 방식의 에이전트를 이용하여 RAG검색 도구를 정의하고 바인딩. 도구 스키마 초안과 초기 프롬프트를 정의하여 프롬프트의 기초적인 틀을 제작하였습니다.</li>
             </ul>
 
             <h5>Infra</h5>
@@ -265,7 +275,7 @@
 
             <h5>데이터</h5>
             <ul>
-                <li><strong>나라별 월드컵 예선전 성적 데이터 분석 및 전처리:</strong> 2014년 부터 약 10년의 데이터를 사용하도록 하였고 예선전 성적과 월드컵 본선 성적의 상관관계를 분석하여 사용방법을 탐색</li>
+                <li><strong>나라별 월드컵 예선전 성적 데이터 분석 및 전처리:</strong> 2014년 부터 약 10년의 데이터를 사용하도록 하였고 예선전 성적과 월드컵 본선 성적의 상관관계를 분석하여 사용방법을 탐색하였습니다.</li>
             </ul>
 
             <h5>모델 설계 및 구현</h5>
@@ -302,7 +312,7 @@
 
             <h5>데이터</h5>
             <ul>
-                <li><strong>인게임 킬로그 데이터 분석 및 전처리:</strong> 인게임 킬로그 데이터를 분석하여 특정 시간에 사망한 플레이어와 해당 플레이어의 평균적인 스탯을 매핑</li>
+                <li><strong>인게임 킬로그 데이터 분석 및 전처리:</strong> 인게임 킬로그 데이터를 분석하여 특정 시간에 사망한 플레이어와 해당 플레이어의 평균적인 스탯을 매핑하였습니다.</li>
             </ul>
 
             <h5>모델 설계 및 구현</h5>
@@ -313,7 +323,7 @@
 
             <div class="troubleshooting">
                 <strong>트러블 슈팅</strong>
-                최초 설계 단계에서는 플레이어의 스탯과 기다 킬로그 데이터를 이용하여 ML 모델 학습을 진행하려 했으나 회의를 통해 배틀그라운드라는 게임 특성상 착륙 위치가 조기사망 예측에 굉장히 중요한 요소라고 판단하였습니다. 하지만 주어진 데이터에는 착륙 좌표에 대한 데이터가 없었기 때문에 게임 진행 극초반 1분 30초(모든 플레이어가 지상에 내려왔을 시점)의 킬로그들을 착륙 지점으로 가정하고 이를 군집화 하여 착륙 지점 군집을 예측 하는 모델을 만들어서 데이터의 부족을 해결하였습니다.
+                최초 설계 단계에서는 플레이어의 스탯과 기타 킬로그 데이터를 이용하여 ML 모델 학습을 진행하려 했으나 회의를 통해 배틀그라운드라는 게임 특성상 착륙 위치가 조기사망 예측에 굉장히 중요한 요소라고 판단하였습니다. 하지만 주어진 데이터에는 착륙 좌표에 대한 데이터가 없었기 때문에 게임 진행 극초반 1분 30초(모든 플레이어가 지상에 내려왔을 시점)의 킬로그들을 착륙 지점으로 가정하고 이를 군집화 하여 착륙 지점 군집을 예측 하는 모델을 만들어서 데이터의 부족을 해결하였습니다.
             </div>
 
             <div class="stack">
@@ -326,4 +336,3 @@
 
 </body>
 </html>
-
